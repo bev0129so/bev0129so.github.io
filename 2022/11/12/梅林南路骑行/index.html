@@ -568,18 +568,12 @@
     <!-- video -->
     
 
-	<style>
-	    @media(max-width: 50em) {
-	        #my-player {
-	            width: 322.5px;
-	            height: 180.6px;
-	        }
-	    }
-	</style>
-
 	<script src="https://cdn.jsdelivr.net/npm/video.js@7.10.2/dist/video.min.js"></script>
 	<script>
-            let options = {};
+            let options = {
+                preload: "auto",
+                fluid: true,
+	    };
             let player = videojs('my-player', options, function onPlayerReady() {
             videojs.log('Player is ready 🚀');
 
