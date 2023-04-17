@@ -12,11 +12,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="luocamp">
+    <meta name="author" content="sobev">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="luocamp">
+    <meta name="copyright" content="sobev">
     
-        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+        <meta name="keywords" content="bike,road bike,杭州骑行,公路车,road bike,骑行">
     
     <meta name="description" content="">
     <meta name="description" content="路线 里山渡2元乘坐渡船到达里山街，开始10KM爬坡😵">
@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://i.imgur.com/62kJ6xA.jpg">
 <meta property="article:published_time" content="2022-11-20T13:59:05.000Z">
 <meta property="article:modified_time" content="2022-12-03T06:53:51.673Z">
-<meta property="article:author" content="luocamp">
+<meta property="article:author" content="sobev">
 <meta property="article:tag" content="cycling">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/6v5Eo1o.jpg">
@@ -211,6 +211,8 @@
     <link rel="preload" href="/scripts/dark.js?v=20211217G" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
     <!-- algolia -->
     
     <!-- 百度统计  -->
@@ -553,12 +555,12 @@
             
 
             
-    <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/waline.js"></script>
     <div id="comment"></div>
-    <script>
-    Waline({
+    <script type='module'>
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    init({
         el: '#comment' ,
-        serverURL: "https://waline-vercel-q9xadx69o-sobev-scboottop.vercel.app",
+        serverURL: "https://waline-vercel-orobjabf8-sobev-scboottop.vercel.app",
         placeholder: "快来评论呀",
         avatar: "mm",
         login: "/github"
@@ -756,6 +758,21 @@
         
             
             
+            <div class="archive-year"> 2023 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span>
+            <a class="archive-post-title" href="/2023/04/15/%E6%B3%B0%E5%AF%8C%E8%B7%AF/">泰富路</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
@@ -763,12 +780,6 @@
         <li class="archive-post-item">
             <span class="archive-post-date">12/11</span>
             <a class="archive-post-title" href="/2022/12/11/%E5%8C%97%E5%B1%B1%E8%A1%97%E5%8D%97%E5%B1%B1%E8%B7%AF/">北山街南山路</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/2022/12/11/%E6%B3%B0%E5%AF%8C%E8%B7%AF/">泰富路</a>
         </li>
     
         
@@ -834,7 +845,7 @@
     var siteMeta = {
         url: "https://bev0129so.github.io",
         root: siteMetaRoot,
-        author: "luocamp"
+        author: "sobev"
     }
 </script>
 

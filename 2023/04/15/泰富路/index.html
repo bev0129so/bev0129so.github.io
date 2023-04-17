@@ -12,23 +12,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="luocamp">
+    <meta name="author" content="sobev">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="luocamp">
+    <meta name="copyright" content="sobev">
     
-        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+        <meta name="keywords" content="bike,road bike,杭州骑行,公路车,road bike,骑行">
     
     <meta name="description" content="">
     <meta name="description" content="泰富路这个地方是骑车偶然发现的，本来计划的是另一条路线，结果休息的时候发现了一个大上坡，想着上去看看，没想到有很多U型弯，爱了😍😍。这边又很多茶农在这里采茶叶，现在是4月份，刚好茶叶嫩芽生长出来。 CHATGPT版本当我骑车在这里穿行时，偶然发现了这个绝美的地方。尽管我原本计划走另一条路线，但在休息时，我发现一个大上坡，想着上去看看，没想到在这里我找到了自己的天堂。这里有许多U型弯道，让我享受">
 <meta property="og:type" content="article">
 <meta property="og:title" content="泰富路">
-<meta property="og:url" content="https://bev0129so.github.io/2022/12/11/%E6%B3%B0%E5%AF%8C%E8%B7%AF/index.html">
+<meta property="og:url" content="https://bev0129so.github.io/2023/04/15/%E6%B3%B0%E5%AF%8C%E8%B7%AF/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="泰富路这个地方是骑车偶然发现的，本来计划的是另一条路线，结果休息的时候发现了一个大上坡，想着上去看看，没想到有很多U型弯，爱了😍😍。这边又很多茶农在这里采茶叶，现在是4月份，刚好茶叶嫩芽生长出来。 CHATGPT版本当我骑车在这里穿行时，偶然发现了这个绝美的地方。尽管我原本计划走另一条路线，但在休息时，我发现一个大上坡，想着上去看看，没想到在这里我找到了自己的天堂。这里有许多U型弯道，让我享受">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-12-11T06:59:43.000Z">
-<meta property="article:modified_time" content="2023-04-15T13:16:07.336Z">
-<meta property="article:author" content="luocamp">
+<meta property="article:published_time" content="2023-04-15T13:54:43.000Z">
+<meta property="article:modified_time" content="2023-04-17T06:33:15.633Z">
+<meta property="article:author" content="sobev">
 <meta property="article:tag" content="cycling">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
@@ -206,6 +206,8 @@
     <link rel="preload" href="/scripts/dark.js?v=20211217G" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
     <!-- algolia -->
     
     <!-- 百度统计  -->
@@ -341,7 +343,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2022/12/11</span>
+                    <span class="post-intro-time">2023/04/15</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -511,17 +513,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2022/12/11/%E5%8C%97%E5%B1%B1%E8%A1%97%E5%8D%97%E5%B1%B1%E8%B7%AF/" title="北山街南山路">
-                    <div class="nextTitle">北山街南山路</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2022/12/10/%E5%8D%97%E8%8B%95%E6%BA%AA%E7%BB%BF%E9%81%93/" title="南苕溪绿道">
-                    <div class="prevTitle">南苕溪绿道</div>
+                <a href="/2022/12/11/%E5%8C%97%E5%B1%B1%E8%A1%97%E5%8D%97%E5%B1%B1%E8%B7%AF/" title="北山街南山路">
+                    <div class="prevTitle">北山街南山路</div>
                 </a>
             
         </li>
@@ -549,12 +546,12 @@
             
 
             
-    <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/waline.js"></script>
     <div id="comment"></div>
-    <script>
-    Waline({
+    <script type='module'>
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    init({
         el: '#comment' ,
-        serverURL: "https://waline-vercel-q9xadx69o-sobev-scboottop.vercel.app",
+        serverURL: "https://waline-vercel-orobjabf8-sobev-scboottop.vercel.app",
         placeholder: "快来评论呀",
         avatar: "mm",
         login: "/github"
@@ -779,6 +776,21 @@
         
             
             
+            <div class="archive-year"> 2023 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span>
+            <a class="archive-post-title" href="/2023/04/15/%E6%B3%B0%E5%AF%8C%E8%B7%AF/">泰富路</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
@@ -786,12 +798,6 @@
         <li class="archive-post-item">
             <span class="archive-post-date">12/11</span>
             <a class="archive-post-title" href="/2022/12/11/%E5%8C%97%E5%B1%B1%E8%A1%97%E5%8D%97%E5%B1%B1%E8%B7%AF/">北山街南山路</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/2022/12/11/%E6%B3%B0%E5%AF%8C%E8%B7%AF/">泰富路</a>
         </li>
     
         
@@ -857,7 +863,7 @@
     var siteMeta = {
         url: "https://bev0129so.github.io",
         root: siteMetaRoot,
-        author: "luocamp"
+        author: "sobev"
     }
 </script>
 
