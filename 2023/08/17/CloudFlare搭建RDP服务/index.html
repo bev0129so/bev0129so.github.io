@@ -19,17 +19,17 @@
         <meta name="keywords" content="bike,road bike,杭州骑行,公路车,road bike,骑行">
     
     <meta name="description" content="">
-    <meta name="description" content="服务端https:&#x2F;&#x2F;github.com&#x2F;cloudflare&#x2F;cloudflared&#x2F;releases&#x2F;latest&#x2F;download&#x2F;cloudflared-windows-amd64.msi安装服务以连接到cloudflare set up 12345678#step 1.cloudflared logincloudflared.exe tunnel create $TUNNELNAMEc">
+    <meta name="description" content="服务端IMPORTANT!!! 😠 记住在Zero Trust  -&gt; Settings -&gt; Network -&gt; Firewall -&gt; Proxy 打开，开启UDPhttps:&#x2F;&#x2F;github.com&#x2F;cloudflare&#x2F;cloudflared&#x2F;releases&#x2F;latest&#x2F;download&#x2F;cloudflared-windows-amd64.msi安装服务以连">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CloudFlare Tunnel 配置RDP服务">
 <meta property="og:url" content="https://bev0129so.github.io/2023/08/17/CloudFlare%E6%90%AD%E5%BB%BARDP%E6%9C%8D%E5%8A%A1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="服务端https:&#x2F;&#x2F;github.com&#x2F;cloudflare&#x2F;cloudflared&#x2F;releases&#x2F;latest&#x2F;download&#x2F;cloudflared-windows-amd64.msi安装服务以连接到cloudflare set up 12345678#step 1.cloudflared logincloudflared.exe tunnel create $TUNNELNAMEc">
+<meta property="og:description" content="服务端IMPORTANT!!! 😠 记住在Zero Trust  -&gt; Settings -&gt; Network -&gt; Firewall -&gt; Proxy 打开，开启UDPhttps:&#x2F;&#x2F;github.com&#x2F;cloudflare&#x2F;cloudflared&#x2F;releases&#x2F;latest&#x2F;download&#x2F;cloudflared-windows-amd64.msi安装服务以连">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://obs-xm-pub.obs.cn-south-1.myhuaweicloud.com/237c92e4a92e4836a4dd35f1b53d27b01692270800373">
 <meta property="og:image" content="https://obs-xm-pub.obs.cn-south-1.myhuaweicloud.com/ee18b2bc05f34754b54d56aec91d33d71692270869578">
 <meta property="article:published_time" content="2023-08-17T11:23:37.000Z">
-<meta property="article:modified_time" content="2023-08-17T11:25:59.045Z">
+<meta property="article:modified_time" content="2023-08-17T11:34:15.430Z">
 <meta property="article:author" content="sobev">
 <meta property="article:tag" content="捣鼓">
 <meta name="twitter:card" content="summary">
@@ -340,7 +340,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">264</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">312</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -502,7 +502,8 @@
                 <main class="main post-page">
     <article class="article-entry">
         
-        <h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p><a target="_blank" rel="noopener" href="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi">https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi</a><br>安装服务以连接到cloudflare</p>
+        <h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p>IMPORTANT!!! 😠</p>
+<h4 id="记住在Zero-Trust-gt-Settings-gt-Network-gt-Firewall-gt-Proxy-打开，开启UDP"><a href="#记住在Zero-Trust-gt-Settings-gt-Network-gt-Firewall-gt-Proxy-打开，开启UDP" class="headerlink" title="记住在Zero Trust  -&gt; Settings -&gt; Network -&gt; Firewall -&gt; Proxy 打开，开启UDP"></a>记住在Zero Trust  -&gt; Settings -&gt; Network -&gt; Firewall -&gt; Proxy 打开，开启UDP</h4><p><a target="_blank" rel="noopener" href="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi">https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi</a><br>安装服务以连接到cloudflare</p>
 <p><code>set up</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#step 1.</span><br>cloudflared login<br>cloudflared.exe tunnel create <span class="hljs-variable">$TUNNELNAME</span><br>cloudflared.exe tunnel route dns <span class="hljs-variable">$TUNNELNAME</span> rdp.yourdomain.com<br><span class="hljs-comment">#上一行操作后会返回一个tunnel的uuid，并且在C:\Users\%USERNAME%\.cloudflared 中会生成一个json文件</span><br><br><span class="hljs-comment">#step 2.</span><br><span class="hljs-comment">#任意目录新建一个config.yaml  内容如下</span><br></code></pre></td></tr></table></figure>
 
@@ -510,6 +511,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 隧道的 UUID, 就是登录凭证的json文件名称</span><br><span class="hljs-attr">tunnel:</span> <span class="hljs-string">xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx</span><br><span class="hljs-comment"># 鉴权文件的全路径，注意替换为自己的</span><br><span class="hljs-attr">credentials-file:</span> <span class="hljs-string">C:\Users\%USERNAME%\.cloudflared\xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx.json</span><br><br><span class="hljs-attr">ingress:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostname:</span> <span class="hljs-string">rdp.yourdomain.com</span><br>    <span class="hljs-attr">service:</span> <span class="hljs-string">rdp://localhost:3389</span> <span class="hljs-comment">#不要改这个 windows默认rdp端口为3389</span><br>  <span class="hljs-comment"># 默认错误404</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">service:</span> <span class="hljs-string">http_status:404</span><br></code></pre></td></tr></table></figure>
 
 <p>🆗，运行服务端<br><code>cloudflared --config=./config.yaml tunnel run</code></p>
+<p>还有一种是根据官网文档的直接在页面配置tunnel rdp协议，但是我没试出来😅</p>
 <p>DONE :)</p>
 <h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><p><a target="_blank" rel="noopener" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/">查看操作系统对应的客户端</a><br>如果是Windows 64位，则下载以下链接<br><code>https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe</code></p>
 <p>输入以下命令:</p>
@@ -678,7 +680,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">1.</span> <span class="toc-text">服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">2.</span> <span class="toc-text">客户端</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">1.</span> <span class="toc-text">服务端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%B0%E4%BD%8F%E5%9C%A8Zero-Trust-gt-Settings-gt-Network-gt-Firewall-gt-Proxy-%E6%89%93%E5%BC%80%EF%BC%8C%E5%BC%80%E5%90%AFUDP"><span class="toc-number">1.1.</span> <span class="toc-text">记住在Zero Trust  -&gt; Settings -&gt; Network -&gt; Firewall -&gt; Proxy 打开，开启UDP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">2.</span> <span class="toc-text">客户端</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
