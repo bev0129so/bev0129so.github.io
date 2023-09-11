@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_133646.jpg">
 <meta property="og:image" content="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/Screenshot_20230910_125633.jpg">
 <meta property="article:published_time" content="2023-09-10T08:54:43.000Z">
-<meta property="article:modified_time" content="2023-09-10T10:54:51.156Z">
+<meta property="article:modified_time" content="2023-09-11T10:51:50.294Z">
 <meta property="article:author" content="sobev">
 <meta property="article:tag" content="cycling">
 <meta name="twitter:card" content="summary">
@@ -512,6 +512,10 @@
                 <main class="main post-page">
     <article class="article-entry">
         
+            <video id="my-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="">
+                
+            </video>
+        
         <h1 id="龙鳞坝"><a href="#龙鳞坝" class="headerlink" title="龙鳞坝"></a>龙鳞坝</h1><p>10点出发龙鳞坝，看了下地图大概有45.8KM,来回就90多了，温度大概32℃，感觉有点难顶啊，昨天还把自己辣堡了😶‍🌫️</p>
 <p>放几张图</p>
 <p><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_130100.jpg"><br><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_130033.jpg"><br><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_130130.jpg"><br><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_130855.jpg"><br><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_130919.jpg"><br><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_131943.jpg"><br><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_132028.jpg"><br><img src="https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/IMG_20230910_132037.jpg"></p>
@@ -580,6 +584,33 @@
     <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
     
     <!-- video -->
+    
+
+	<script src="https://cdn.jsdelivr.net/npm/video.js@7.10.2/dist/video.min.js"></script>
+	<script>
+        let hasVideo = true;
+        let videoUrl = "https://tour-de-hz.oss-cn-hangzhou.aliyuncs.com/LongLinDam/llb/index.m3u8";
+        console.log(videoUrl)
+        let options = {
+                preload: "auto",
+                fluid: true,
+                sources: [{
+                    src: videoUrl,
+                    type: "application/x-mpegURL"
+                }]
+	    };
+	    console.log("has video")
+        let player = videojs('my-player', options, function onPlayerReady() {
+            videojs.log('Player is ready 🚀');
+
+            // In this context, `this` is the player that was created by Video.js.
+            // this.play();
+
+            this.on('ended', function () {
+                    videojs.log('FIN_1');
+                });
+            });
+    	</script>
     
     <!-- Mathjax -->
     
