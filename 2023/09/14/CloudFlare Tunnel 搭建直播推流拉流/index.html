@@ -214,6 +214,19 @@
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
     <!-- algolia -->
     
+        <script>
+            var hits = JSON.parse('{"per_page":10}')
+            var labels = JSON.parse('{"input_placeholder":"Search for Posts","hits_empty":"We did not find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}')
+
+            var algolia = {
+                applicationID: 'R5EK6K4RPH',
+                apiKey: '6cc7b651121c4528e288be31a1aa3c81',
+                indexName: 'travel_explore',
+                hits: hits,
+                labels: labels
+            }
+        </script>
+    
     <!-- 百度统计  -->
     
     <!-- 谷歌统计  -->
@@ -852,20 +865,6 @@
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
     
     
@@ -875,6 +874,10 @@
         Total : 14
         </div>
         <!-- search  -->
+        
+            <div class="site-search site-search-loading popup-trigger">
+                <span class="iconfont-archer search-icon">&#xe627;</span>
+            </div>
         
     </div>
     
@@ -994,14 +997,14 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
         
-            <span class="sidebar-tag-name" data-tags="cycling">
-                <span class="iconfont-archer">&#xe606;</span>
-                cycling
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="捣鼓">
                 <span class="iconfont-archer">&#xe606;</span>
                 捣鼓
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="cycling">
+                <span class="iconfont-archer">&#xe606;</span>
+                cycling
             </span>
         
     </div>
@@ -1047,6 +1050,28 @@
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
+        
+            <div class="site-search site-search-loading">
+    <div class="algolia-popup popup">
+        <div class="algolia-search">
+            <div class="algolia-search-input-icon">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="algolia-search-input" id="algolia-search-input"></div>
+            <div class="popup-btn-close">
+                <i class="iconfont-archer">&#xe609;</i>
+            </div>
+        </div>
+
+        <div class="algolia-results">
+            <div id="algolia-stats" class="algolia-stats"></div>
+            <div id="algolia-hits"></div>
+            <div id="algolia-pagination" class="algolia-pagination"></div>
+        </div>
+    </div>
+</div>
+
+            <script src="/scripts/search.js?v=20211217G" defer></script>
         
         <!-- busuanzi -->
         
